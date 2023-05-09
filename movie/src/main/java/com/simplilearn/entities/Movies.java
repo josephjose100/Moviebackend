@@ -17,16 +17,17 @@ public class Movies {
 	private float price;
 	private String language;
 	private String description;
-	private int availability;
-	@OneToOne
-	private ShowTiming timings;
+	private boolean availability;
+	private String timing1;
+	private String timing2;
+	private String timing3;
 	private String url;
 	public Movies() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Movies(int id, String name, String genre, float price, String language, String description, int availability,
-			ShowTiming timings, String url) {
+	public Movies(int id, String name, String genre, float price, String language, String description,
+			boolean availability, String timing1, String timing2, String timing3, String url) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -35,7 +36,9 @@ public class Movies {
 		this.language = language;
 		this.description = description;
 		this.availability = availability;
-		this.timings = timings;
+		this.timing1 = timing1;
+		this.timing2 = timing2;
+		this.timing3 = timing3;
 		this.url = url;
 	}
 	public int getId() {
@@ -74,17 +77,29 @@ public class Movies {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getAvailability() {
+	public boolean isAvailability() {
 		return availability;
 	}
-	public void setAvailability(int availability) {
+	public void setAvailability(boolean availability) {
 		this.availability = availability;
 	}
-	public ShowTiming getTimings() {
-		return timings;
+	public String getTiming1() {
+		return timing1;
 	}
-	public void setTimings(ShowTiming timings) {
-		this.timings = timings;
+	public void setTiming1(String timing1) {
+		this.timing1 = timing1;
+	}
+	public String getTiming2() {
+		return timing2;
+	}
+	public void setTiming2(String timing2) {
+		this.timing2 = timing2;
+	}
+	public String getTiming3() {
+		return timing3;
+	}
+	public void setTiming3(String timing3) {
+		this.timing3 = timing3;
 	}
 	public String getUrl() {
 		return url;
